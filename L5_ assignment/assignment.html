@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L5 Assignment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Nikhil Bhalla 12/2/2025 -->
+    <header>
+        <!-- This will be based on the ZenPaws company I made for the exploring Figma sites thing. -->
+        <h1>ZenPaws Adoption Interest</h1>
+        <h3>This is a form to show interest in one of our puppies or kitties for adoption.</h3>
+    </header>
+    <main>
+        <!-- Video of a kitten playing with a toy. Matches with the theme. -->
+        <video autoplay loop controls muted width="720" height="480">
+            <source src="kitten.mp4" type="video/mp4"/>
+            <!-- Fallback text -->
+            The video failed to load.
+        </video>
+        <!-- Form method is get, none of the information is sensitive -->
+        <form method="get" action="./assignment.html">
+            <h4>Enter details here...</h4>
+            <!-- Full name field -->
+            <label for="name">Full Name:</label><br>
+            <input type="text" name="name" id="name" required minlength="4"><br><br>
+            <!-- Email field -->
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+            <!-- Preferred pet field -->
+            <label for="preference">Preferred Pet?</label><br>
+            <!-- Dog choice (radio) -->
+            <input type="radio" name="preference" id="Dog" required>
+            <label for="Dog">Dog</label><br>
+            <!-- Cat choice (radio) -->
+            <input type="radio" name="preference" id="Cat">
+            <label for="Cat">Cat</label><br><br>
+            <!-- Experience field -->
+            <label for="experience">Tell us about your home and experience with pets.</label><br>
+            <textarea name="experience" id="experience" cols="40" rows="5" required></textarea><br><br>
+            <!-- Understanding field -->
+            <input type="checkbox" name="understanding" id="understanding" required>
+            <label for="understanding">I understand this is not a final adoption approval.</label><br><br>
+            <!-- Submit button -->
+            <input type="submit" value="Submit Interest Form" id="button">
+        </form>
+    </main>
 </body>
 </html>
